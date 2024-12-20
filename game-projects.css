@@ -1,0 +1,97 @@
+/* Game Projects Page Styles */
+body {
+  background-color: black;
+  color: white;
+  font-family: "Poppins", sans-serif;
+}
+
+header {
+  margin-top: 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem 9%;
+  background-color: transparent;
+  filter: drop-shadow(10px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+
+nav a {
+  font-size: 1.8rem;
+  color: white;
+  margin-left: 4rem;
+  font-weight: 500;
+  transition: 0.3s ease;
+}
+
+nav a:hover,
+nav a.active {
+  color: #cc5500;
+}
+
+.game-projects {
+  padding: 5rem 9% 5rem; /* Add bottom padding */
+  padding-top: calc(
+    5rem + 60px
+  ); /* Increase top padding to move content down even more */
+  min-height: 100vh;
+}
+
+.game-projects h1 {
+  font-size: 4rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.project {
+  background-color: #222;
+  border-radius: 1rem;
+  padding: 2rem;
+  margin: 2rem 0;
+  box-shadow: 0 0 15px rgba(204, 85, 0, 0.5);
+  transition: transform 0.3s ease;
+}
+
+.project:hover {
+  transform: scale(1.05);
+}
+
+.project h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #cc5500;
+}
+
+.project p {
+  font-size: 1.6rem;
+  margin-bottom: 1.5rem;
+}
+
+.project .btn {
+  display: inline-block;
+  padding: 1rem 2.5rem;
+  background-color: #cc5500;
+  color: black;
+  border-radius: 4rem;
+  font-size: 1.6rem;
+  border: 2px solid #cc5500;
+  transition: 0.3s ease;
+}
+
+.project .btn:hover {
+  background-color: black;
+  color: #cc5500;
+  box-shadow: 0 0 25px #cc5500;
+}
+
+footer {
+  text-align: center;
+  padding: 2rem 0;
+  background-color: black;
+  color: white;
+}
