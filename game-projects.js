@@ -28,6 +28,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     function goToSlide(index) {
+        currentIndex = index;
         // Remove active class from all slides
         slides.forEach(slide => {
             slide.classList.remove('active');
@@ -87,4 +88,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Start auto-play initially
     startAutoPlay();
+    
+    // Add this line after all function definitions to initialize first slide
+    goToSlide(0);
 }); 
