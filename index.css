@@ -85,7 +85,8 @@ nav a.active {
 
   .typing-text {
     font-size: 2.5rem;
-    min-width: 220px;
+    min-width: 250px;
+    max-width: 100%;
   }
 
   .social-icons a {
@@ -115,7 +116,8 @@ nav a.active {
 
   .typing-text {
     font-size: 2rem;
-    min-width: 180px;
+    min-width: 200px;
+    max-width: 90%;
   }
 
   .social-icons a {
@@ -142,7 +144,8 @@ nav a.active {
 
   .typing-text {
     font-size: 1.8rem;
-    min-width: 160px;
+    min-width: 180px;
+    max-width: 85%;
   }
 
   .typing-text span::after {
@@ -251,6 +254,9 @@ span {
   font-size: 34px;
   font-weight: 600;
   min-width: 280px;
+  white-space: nowrap;
+  overflow: hidden;
+  display: inline-block;
 }
 
 .typing-text span {
@@ -265,19 +271,19 @@ span {
 
 .typing-text span::after {
   content: "";
-  background-color: #000000;
   position: absolute;
+  background-color: #000000;
   width: 2px;
   height: 100%;
-  border-left: none;
   right: -8px;
   animation: cursor 0.9s infinite;
+  top: 0;
+  display: block;
 }
 
 @keyframes cursor {
-  to {
-    opacity: 0;
-  }
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
 }
 
 @keyframes words {
