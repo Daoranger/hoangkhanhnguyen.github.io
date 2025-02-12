@@ -130,10 +130,23 @@ footer {
 }
 
 .project-slide img {
-    width: 780px;  /* Fixed width (65% of 1200px) */
-    height: 460px;  /* Fixed height */
+    width: 840px;
+    height: 470px;
     object-fit: cover;
-    flex-shrink: 0;  /* Prevent image shrinking */
+    flex-shrink: 0;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    position: relative;
+    z-index: 1;
+    border-radius: 8px;
+    margin-left: -25px;
+    margin-top: -5px;
+    transition: transform 0.3s ease;  /* Add smooth transition */
+    cursor: pointer;  /* Add pointer cursor on hover */
+}
+
+.project-slide img:hover {
+    transform: scale(1.02);  /* Scale up by 2% on hover */
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);  /* Slightly stronger shadow on hover */
 }
 
 .project-info {
