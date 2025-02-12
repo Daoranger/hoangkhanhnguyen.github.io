@@ -318,38 +318,48 @@ footer {
         margin-top: 2rem;
     }
 
+    .carousel-wrapper {
+        padding-top: 60px;  /* Reduced from 80px */
+        gap: 10px;
+    }
+
+    .project-slide {
+        padding: 10px;
+    }
+
+    .project-info {
+        padding: 1.5em;
+        max-height: 300px;  /* Limit height on mobile */
+    }
+
     .project-info h2 {
-        font-size: 1.8em;
+        font-size: 1.6em;
+        margin-bottom: 0.5em;  /* Reduced margin */
     }
 
     .description {
         font-size: 0.9em;
+        line-height: 1.4;  /* Reduced line height */
+        margin-top: 0.5em;  /* Reduced margin */
+    }
+
+    .tags {
+        margin: 0.5em 0;  /* Reduced margin */
+        gap: 0.3em;
     }
 
     .tags span {
         font-size: 0.8em;
+        padding: 0.2em 0.6em;
+    }
+
+    .carousel-dots {
+        bottom: 0.3em;
+        right: 0.5em;
     }
 
     .thumbnail-container {
         display: none; /* Hide thumbnails on mobile */
-    }
-
-    .carousel-dots {
-        bottom: 0.5em;
-        right: 1em;
-    }
-
-    .dot {
-        width: 6px;
-        height: 6px;
-    }
-
-    .carousel-wrapper {
-        padding-top: 80px;  /* Reduce top padding on mobile */
-    }
-
-    .project-slide {
-        padding: 10px;     /* Add some padding */
     }
 }
 
@@ -358,8 +368,17 @@ footer {
         font-size: 2.5rem;
     }
 
+    .carousel-wrapper {
+        padding: 50px 10px 10px 10px;  /* Further reduced padding */
+    }
+
+    .project-info {
+        padding: 1em;
+        max-height: 250px;  /* Even more compact for smaller screens */
+    }
+
     .project-info h2 {
-        font-size: 1.5em;
+        font-size: 1.4em;
     }
 
     .description {
@@ -367,16 +386,8 @@ footer {
     }
 
     .carousel-button {
-        padding: 0.8rem;
-        font-size: 0.9em;
-    }
-
-    .carousel-wrapper {
-        padding: 70px 10px 10px 10px;
-    }
-
-    .project-info {
-        padding: 1.5rem;
+        padding: 0.6rem;  /* Smaller buttons */
+        font-size: 0.8em;
     }
 }
 

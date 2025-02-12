@@ -93,6 +93,11 @@ nav a.active {
     height: 3.5rem;
     font-size: 1.8rem;
   }
+
+  .typing-text span::after {
+    width: 2px;
+    right: -6px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -123,11 +128,26 @@ nav a.active {
   section {
     padding: 15rem 5% 2rem;
   }
+
+  .typing-text span::after {
+    width: 1.5px;
+    right: -4px;
+  }
 }
 
 @media (max-width: 365px) {
   .home-content h1 {
     font-size: 3.5rem;
+  }
+
+  .typing-text {
+    font-size: 1.8rem;
+    min-width: 160px;
+  }
+
+  .typing-text span::after {
+    width: 1px;
+    right: -3px;
   }
 }
 
