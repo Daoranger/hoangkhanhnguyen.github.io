@@ -64,35 +64,70 @@ nav a.active {
 }
 
 @media (max-width: 995px) {
-  nav {
-    position: absolute;
-    display: none;
-    top: 0;
-    right: 0;
-    width: 40%;
-    border-left: 3px solid #cc5500;
-    border-bottom: 3px solid #cc5500;
-    border-bottom-left-radius: 2rem;
-    padding: 1rem solid;
-    background-color: #161616;
-    border-top: 0.1rem solid rgba(0, 0, 0, 0.1);
+  html {
+    font-size: 55%;
   }
 
-  nav.active {
-    display: block;
+  .home {
+    flex-direction: column;
+    margin: 5rem 4rem;
+    text-align: center;
+    padding-top: 8rem;
   }
 
-  nav a {
-    display: block;
+  .home .home-content h3 {
+    font-size: 3.5rem;
+  }
+
+  .home-content h1 {
+    font-size: 5rem;
+  }
+
+  .typing-text {
+    font-size: 2.5rem;
+    min-width: 220px;
+  }
+
+  .social-icons a {
+    width: 3.5rem;
+    height: 3.5rem;
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 50%;
+  }
+
+  .home-content h1 {
+    font-size: 4rem;
+  }
+
+  .home-content h3 {
+    font-size: 2.5rem;
+  }
+
+  .typing-text {
     font-size: 2rem;
-    margin: 3rem 0;
+    min-width: 180px;
   }
 
-  nav a:hover,
-  nav a.active {
-    padding: 1rem;
-    border-radius: 0.5rem;
-    border-bottom: 0.5rem solid #cc5500;
+  .social-icons a {
+    width: 3rem;
+    height: 3rem;
+    font-size: 1.5rem;
+    margin: 2rem 1rem;
+  }
+
+  section {
+    padding: 15rem 5% 2rem;
+  }
+}
+
+@media (max-width: 365px) {
+  .home-content h1 {
+    font-size: 3.5rem;
   }
 }
 
@@ -251,27 +286,6 @@ span {
 @media (max-width: 1000px) {
   .home {
     gap: 4rem;
-  }
-}
-
-@media (max-width: 995px) {
-  .home {
-    flex-direction: column;
-    margin: 5rem 4rem;
-    text-align: center;
-  }
-
-  .home .home-content h3 {
-    font-size: 3.5rem;
-  }
-
-  .home-content h1 {
-    font-size: 6rem;
-  }
-
-  .home-img img {
-    width: 70vw;
-    margin-top: 4rem;
   }
 }
 

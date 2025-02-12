@@ -89,24 +89,25 @@ footer {
 .carousel-wrapper {
     position: relative;
     max-width: 1400px;
+    width: 100%;
     margin: 0 auto;
     display: flex;
-    align-items: center;
+    justify-content: center;  /* Center horizontally */
+    align-items: center;      /* Center vertically */
     gap: 20px;
-    padding-top: 100px;  /* Add padding to account for nav bar */
-    filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.4));  /* Added drop shadow */
+    padding-top: 100px;
+    filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.4));
 }
 
 .carousel-container {
     position: relative;
-    width: 1200px;  /* Fixed width instead of max-width */
-    height: 460px;  /* Fixed height to match slides */
-    margin: 0 auto;
+    width: 1200px;
+    height: 460px;
     overflow: visible;
     border-radius: 4px;
-    background: #161616;  /* Lightened to match */
+    background: #161616;
     padding: 0;
-    border: 1px solid rgba(255, 255, 255, 0.1);  /* Added subtle white outline */
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .carousel-content {
@@ -275,4 +276,125 @@ footer {
 .prev, .next {
     position: static;
     transform: none;
+}
+
+@media (max-width: 1200px) {
+    .carousel-wrapper {
+        padding: 100px 20px 20px 20px;  /* Add horizontal padding */
+        width: 100%;
+    }
+
+    .carousel-container {
+        width: 100%;        /* Make container full width */
+        max-width: 90vw;    /* But limit to 90% of viewport */
+        height: auto;
+        margin: 0 auto;
+    }
+
+    .project-slide {
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+        align-items: center;  /* Center content */
+    }
+
+    .project-slide img {
+        width: 100%;
+        max-width: 860px;   /* Match desktop max width */
+        height: auto;
+        margin: 0 auto;     /* Center image */
+    }
+
+    .project-info {
+        width: 100%;
+        max-width: 860px;   /* Match image width */
+        margin: 0 auto;     /* Center info section */
+    }
+}
+
+@media (max-width: 768px) {
+    .game-projects h1 {
+        font-size: 3rem;
+        margin-top: 2rem;
+    }
+
+    .project-info h2 {
+        font-size: 1.8em;
+    }
+
+    .description {
+        font-size: 0.9em;
+    }
+
+    .tags span {
+        font-size: 0.8em;
+    }
+
+    .thumbnail-container {
+        display: none; /* Hide thumbnails on mobile */
+    }
+
+    .carousel-dots {
+        bottom: 0.5em;
+        right: 1em;
+    }
+
+    .dot {
+        width: 6px;
+        height: 6px;
+    }
+
+    .carousel-wrapper {
+        padding-top: 80px;  /* Reduce top padding on mobile */
+    }
+
+    .project-slide {
+        padding: 10px;     /* Add some padding */
+    }
+}
+
+@media (max-width: 480px) {
+    .game-projects h1 {
+        font-size: 2.5rem;
+    }
+
+    .project-info h2 {
+        font-size: 1.5em;
+    }
+
+    .description {
+        font-size: 0.85em;
+    }
+
+    .carousel-button {
+        padding: 0.8rem;
+        font-size: 0.9em;
+    }
+
+    .carousel-wrapper {
+        padding: 70px 10px 10px 10px;
+    }
+
+    .project-info {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 365px) {
+    .game-projects h1 {
+        font-size: 2rem;
+    }
+
+    .project-info h2 {
+        font-size: 1.3em;
+    }
+
+    .tags {
+        gap: 0.3em;
+    }
+
+    .tags span {
+        padding: 0.2em 0.6em;
+        font-size: 0.75em;
+    }
 }
