@@ -28,8 +28,16 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     function goToSlide(index) {
-        currentIndex = index;
-        carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
+        // Remove active class from all slides
+        slides.forEach(slide => {
+            slide.classList.remove('active');
+            slide.classList.remove('fade');
+        });
+        
+        // Add active and fade classes to current slide
+        slides[currentIndex].classList.add('active');
+        slides[currentIndex].classList.add('fade');
+        
         updateDots();
     }
     
