@@ -153,17 +153,24 @@ footer {
 
 .tags {
     display: flex;
-    flex-wrap: wrap;  /* Allow tags to wrap */
+    flex-wrap: wrap;
     gap: 0.5em;
     margin: 1em 0;
 }
 
 .tags span {
-    background: rgba(204, 85, 0, 0.1);
+    background: rgba(255, 255, 255, 0.1);  /* Changed to white with low opacity */
     padding: 0.3em 0.8em;
-    border-radius: 3px;  /* More rectangular */
+    border-radius: 3px;
     font-size: 0.9em;
-    border: 1px solid #cc5500;
+    border: 1px solid rgba(255, 255, 255, 0.3);  /* Changed to white border */
+    color: #ffffff;  /* Explicit white text */
+    transition: all 0.3s ease;
+}
+
+.tags span:hover {
+    background: rgba(255, 255, 255, 0.2);  /* Slightly more visible on hover */
+    border-color: rgba(255, 255, 255, 0.5);  /* More visible border on hover */
 }
 
 .description {
@@ -220,22 +227,27 @@ footer {
 
 .carousel-button {
     position: relative;
-    background: rgba(169, 169, 169, 0.3);
+    background: linear-gradient(145deg, #1a1a1a, #333333);  /* Dark gradient */
     color: #ffffff;
     border: none;
     padding: 1.5em 1em;
     cursor: pointer;
     z-index: 2;
     transition: all 0.3s ease;
-    box-shadow: 0 0 10px rgba(169, 169, 169, 0.3);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
     border-radius: 5px;
-    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.1);  /* Subtle border */
 }
 
 .carousel-button:hover {
-    background: rgba(204, 85, 0, 0.8);
-    box-shadow: 0 0 15px rgba(204, 85, 0, 0.5);
+    background: linear-gradient(145deg, #333333, #1a1a1a);  /* Reversed dark gradient */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
     transform: scale(1.1);
+}
+
+.carousel-button i {
+    font-size: 1.2em;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 /* Remove the prev and next position styles since they're no longer needed */
