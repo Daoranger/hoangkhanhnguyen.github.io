@@ -1,9 +1,4 @@
 /* Game Projects Page Styles */
-body {
-  background-color: black;
-  color: white;
-  font-family: "Poppins", sans-serif;
-}
 
 .game-projects {
   display: flex;
