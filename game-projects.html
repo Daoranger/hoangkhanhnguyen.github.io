@@ -13,29 +13,57 @@
   </head>
   <body>
     <div id="nav-placeholder"></div>
+    
     <section class="game-projects">
-      <h1>My Game Projects</h1>
-      <div class="project">
-        <h2>Project Title 1</h2>
-        <p>
-          Description of the game project, its features, and technologies used.
-        </p>
-        <a href="link-to-project-1" class="btn">View Project</a>
+      <div class="carousel-container">
+        <button class="carousel-button prev">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+        
+        <div class="carousel-content">
+          <div class="project-slide">
+            <img src="images/Life is Roblox.png" alt="Game 1">
+            <div class="project-info">
+              <h2>Game Title</h2>
+              <div class="tags">
+                <span>RPG</span>
+                <span>Action</span>
+                <span>Adventure</span>
+              </div>
+              <p class="description">Game description goes here...</p>
+            </div>
+          </div>
+
+          <div class="project-slide">
+            <img src="images/Life is Roblox.png" alt="Game 2">
+            <div class="project-info">
+              <h2>Second Game Title</h2>
+              <div class="tags">
+                <span>Strategy</span>
+                <span>Puzzle</span>
+                <span>2D</span>
+              </div>
+              <p class="description">Description for your second game goes here...</p>
+            </div>
+          </div>
+        </div>
+
+        <button class="carousel-button next">
+          <i class="fas fa-chevron-right"></i>
+        </button>
+
+        <div class="carousel-dots">
+          <!-- Dots will be added by JavaScript -->
+        </div>
       </div>
-      <div class="project">
-        <h2>Project Title 2</h2>
-        <p>
-          Description of the game project, its features, and technologies used.
-        </p>
-        <a href="link-to-project-2" class="btn">View Project</a>
-      </div>
-      <!-- Add more projects as needed -->
     </section>
+
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script>
       $(function(){
         $("#nav-placeholder").load("nav.html");
       });
     </script>
+    <script src="game-projects.js"></script>
   </body>
 </html>

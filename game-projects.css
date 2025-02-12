@@ -34,9 +34,10 @@ nav a.active {
 }
 
 .game-projects {
-  padding: 5rem 9% 5rem;
-  padding-top: calc(5rem + 60px);
-  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  min-height: 100vh;  /* This ensures full viewport height */
+  padding: 4em 0;     /* Add some padding top and bottom */
 }
 
 .game-projects h1 {
@@ -110,4 +111,96 @@ footer {
   padding: 2rem 0;
   background-color: black;
   color: white;
+}
+
+.carousel-container {
+    position: relative;
+    max-width: 1200px;
+    margin: 2em auto;
+    overflow: hidden;
+}
+
+.carousel-content {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.project-slide {
+    min-width: 100%;
+    position: relative;
+}
+
+.project-slide img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+
+.project-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 2em;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+    color: white;
+}
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 1em;
+    cursor: pointer;
+    z-index: 2;
+    transition: background 0.3s ease;
+}
+
+.carousel-button:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
+
+.carousel-dots {
+    position: absolute;
+    bottom: 1em;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 0.5em;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+}
+
+.dot.active {
+    background: white;
+}
+
+.tags {
+    display: flex;
+    gap: 0.5em;
+    margin: 1em 0;
+}
+
+.tags span {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 0.3em 0.8em;
+    border-radius: 20px;
+    font-size: 0.9em;
 }

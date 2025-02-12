@@ -19,31 +19,62 @@
     .logo-container {
         display: flex;
         align-items: center;
-        gap: 20px;  /* Increased spacing between image and text */
+        gap: 20px;
     }
     
     .logo-image {
-        width: 45px;  /* Slightly larger image */
-        height: 45px;
+        width: 60px;  /* Increased from 45px */
+        height: 60px;
         border-radius: 50%;
         object-fit: cover;
+        transition: transform 0.3s ease;
+    }
+
+    .logo-image:hover {
+        transform: scale(1.2);
     }
 
     .title-container {
         display: flex;
         flex-direction: column;
-        gap: 4px;  /* Slightly increased gap between name and role */
+        gap: 4px;
     }
 
     .logo {
-        margin: 0;  /* Remove any default margins */
-        font-size: 1.8em;  /* Increased from 1.2em */
+        margin: 0;
+        font-size: 2.2em;  /* Increased from 1.8em */
+        transition: transform 0.3s ease;
+    }
+
+    .logo:hover {
+        transform: scale(1.1);
     }
 
     .role {
-        font-size: 1.2em;  /* Increased from 0.8em */
-        color: #666;  /* Subtle color for role */
-        font-weight: 300;  /* Lighter weight for role */
+        font-size: 1.4em;  /* Increased from 1.2em */
+        color: #444;  /* Darkened from #666 for better visibility */
+        font-weight: 400;  /* Increased from 300 for better visibility */
+        transition: transform 0.3s ease;
+    }
+
+    .role:hover {
+        transform: scale(1.1);
+    }
+
+    nav a {
+        text-decoration: none;
+        color: inherit;
+        padding: 0.5em 1em;
+        transition: transform 0.3s ease;
+        display: inline-block;  /* Added to ensure transform works properly */
+    }
+
+    nav a:hover {
+        transform: scale(1.1);
+    }
+
+    nav a.active {
+        font-weight: bold;
     }
 </style>
 
