@@ -118,6 +118,10 @@ footer {
     max-width: 1200px;
     margin: 2em auto;
     overflow: hidden;
+    box-shadow: 0 0 20px rgba(204, 85, 0, 0.3);
+    border-radius: 10px;
+    background: rgba(34, 34, 34, 0.8);
+    padding: 20px;
 }
 
 .carousel-content {
@@ -128,6 +132,7 @@ footer {
 .project-slide {
     min-width: 100%;
     position: relative;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
 .project-slide img {
@@ -142,25 +147,28 @@ footer {
     left: 0;
     right: 0;
     padding: 2em;
-    background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.9));
     color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .carousel-button {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.6);
     color: white;
     border: none;
     padding: 1em;
     cursor: pointer;
     z-index: 2;
-    transition: background 0.3s ease;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .carousel-button:hover {
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(204, 85, 0, 0.8);
+    box-shadow: 0 0 15px rgba(204, 85, 0, 0.5);
 }
 
 .prev {

@@ -45,5 +45,5 @@ document.addEventListener('DOMContentLoaded', function() {
     prevButton.addEventListener('click', prevSlide);
     
     // Auto-play (optional)
-    setInterval(nextSlide, 5000);
+    setInterval(nextSlide, 60000);
 }); 
