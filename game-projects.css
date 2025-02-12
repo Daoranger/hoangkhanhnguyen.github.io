@@ -162,16 +162,17 @@ footer {
 }
 
 .carousel-button {
-    position: relative; /* Changed from absolute */
-    background: rgba(0, 0, 0, 0.6);
-    color: white;
+    position: relative;
+    background: rgba(169, 169, 169, 0.3);
+    color: #ffffff;
     border: none;
     padding: 1.5em 1em;
     cursor: pointer;
     z-index: 2;
     transition: all 0.3s ease;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 10px rgba(169, 169, 169, 0.3);
     border-radius: 5px;
+    backdrop-filter: blur(5px);
 }
 
 .carousel-button:hover {
