@@ -5,39 +5,11 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
-header {
-  margin-top: 20px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  padding: 1rem 9%;
-  background-color: transparent;
-  filter: drop-shadow(10px);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  z-index: 100;
-}
-
-nav a {
-  font-size: 1.8rem;
-  color: white;
-  margin-left: 4rem;
-  font-weight: 500;
-  transition: 0.3s ease;
-}
-
-nav a:hover,
-nav a.active {
-  color: #cc5500;
-}
-
 .game-projects {
   display: flex;
   align-items: center;
   min-height: 100vh;
-  padding: 18em 0;
+  padding: 10rem 0;
 }
 
 .game-projects h1 {
@@ -116,7 +88,7 @@ footer {
 .carousel-wrapper {
     position: relative;
     max-width: 1400px;
-    margin: 6em auto;
+    margin: 0 auto;
     display: flex;
     align-items: center;
     gap: 20px;

@@ -12,8 +12,8 @@
         <a href="index.html">Home</a>
         <a href="game-projects.html">Game Projects</a>
         <a href="other-projects.html">Other Projects</a>
-        <a href="https://drive.google.com/file/d/1CrC2c2-egnaXx-H201L2GqfK6sQdPTh_/view?usp=sharing">Resume</a>
         <a href="contact.html">Contact</a>
+        <a href="https://drive.google.com/file/d/1CrC2c2-egnaXx-H201L2GqfK6sQdPTh_/view?usp=sharing">Resume</a>
     </nav>
 </header>
 
@@ -126,17 +126,14 @@
 </style>
 
 <script>
-    // Get current page filename
     const currentPage = window.location.pathname.split("/").pop() || 'index.html';
     
-    // Add active class to the corresponding nav link
     document.querySelectorAll('nav a').forEach(link => {
-        if (link.getAttribute('href') === '#' || link.getAttribute('href') === currentPage) {
+        if (link.getAttribute('href') === currentPage) {
             link.classList.add('active');
         }
     });
     
-    // Add class to body if we're on index page
     if (currentPage === 'index.html' || currentPage === '') {
         document.body.classList.add('index-page');
     }
