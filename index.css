@@ -84,9 +84,8 @@ nav a.active {
   }
 
   .typing-text {
-    font-size: 2.5rem;
-    min-width: 250px;
-    max-width: 100%;
+    font-size: 2rem;
+    width: 650px;
   }
 
   .social-icons a {
@@ -115,9 +114,8 @@ nav a.active {
   }
 
   .typing-text {
-    font-size: 2rem;
-    min-width: 200px;
-    max-width: 90%;
+    font-size: 1.6rem;
+    width: 500px;
   }
 
   .social-icons a {
@@ -143,9 +141,8 @@ nav a.active {
   }
 
   .typing-text {
-    font-size: 1.8rem;
-    min-width: 180px;
-    max-width: 85%;
+    font-size: 1.4rem;
+    width: 400px;
   }
 
   .typing-text span::after {
@@ -251,9 +248,9 @@ span {
 }
 
 .typing-text {
-  font-size: 34px;
+  font-size: 2.3rem;
   font-weight: 600;
-  min-width: 280px;
+  width: 800px;
   white-space: nowrap;
   overflow: hidden;
   display: inline-block;
