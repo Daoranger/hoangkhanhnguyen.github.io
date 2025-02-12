@@ -36,8 +36,8 @@ nav a.active {
 .game-projects {
   display: flex;
   align-items: center;
-  min-height: 100vh;  /* This ensures full viewport height */
-  padding: 4em 0;     /* Add some padding top and bottom */
+  min-height: 100vh;
+  padding: 18em 0;
 }
 
 .game-projects h1 {
@@ -116,7 +116,7 @@ footer {
 .carousel-wrapper {
     position: relative;
     max-width: 1400px;
-    margin: 2em auto;
+    margin: 6em auto;
     display: flex;
     align-items: center;
     gap: 20px;
@@ -189,23 +189,30 @@ footer {
 
 .carousel-dots {
     position: absolute;
-    bottom: 1em;
+    bottom: -0.3em;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
-    gap: 0.5em;
+    gap: 1em;
+    padding: 1em;
 }
 
 .dot {
-    width: 10px;
-    height: 10px;
+    width: 8px;
+    height: 8px;
     border-radius: 50%;
     background: rgba(255, 255, 255, 0.5);
     cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.dot:hover {
+    background: rgba(255, 255, 255, 0.8);
 }
 
 .dot.active {
     background: white;
+    transform: scale(1.2);
 }
 
 .tags {
