@@ -98,84 +98,142 @@ footer {
 
 .carousel-container {
     position: relative;
-    max-width: 1200px;
+    width: 1200px;  /* Fixed width instead of max-width */
+    height: 460px;  /* Fixed height to match slides */
     margin: 0 auto;
     overflow: hidden;
-    box-shadow: 0 0 20px rgb(0, 0, 0);
-    border-radius: 10px;
-    background: rgba(0, 0, 0, 0.8);
-    padding: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    background: #000000;
+    padding: 0;
 }
 
 .carousel-content {
     display: flex;
     transition: transform 0.5s ease-in-out;
-    width: 100%;
-    position: relative;
+    height: 100%;  /* Full height */
 }
 
 .project-slide {
-    min-width: 100%;
+    width: 1200px;  /* Fixed width to match container */
+    height: 460px;  /* Fixed height to match container */
     flex-shrink: 0;
     position: relative;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-    border-radius: 10px;
     overflow: hidden;
-    display: none;  /* Hide all slides by default */
+    display: none;
 }
 
 .project-slide.active {
-    display: block;  /* Only show active slide */
-}
-
-/* Modify the JavaScript transition to fade instead of slide */
-.project-slide.fade {
-    animation: fade 0.5s ease-in-out;
-}
-
-@keyframes fade {
-    from {
-        opacity: 0.4;
-    }
-    to {
-        opacity: 1;
-    }
+    display: flex;
+    gap: 20px;
 }
 
 .project-slide img {
-    width: 100%;
-    height: 500px;
+    width: 780px;  /* Fixed width (65% of 1200px) */
+    height: 460px;  /* Fixed height */
     object-fit: cover;
+    flex-shrink: 0;  /* Prevent image shrinking */
 }
 
 .project-info {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
+    width: 400px;  /* Fixed width (roughly 35% of 1200px) */
+    height: 460px;  /* Fixed height */
     padding: 2em;
-    background: linear-gradient(transparent, rgba(0, 0, 0, 0.9));
+    background: #000000;
     color: white;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    overflow-y: auto;  /* Allow scrolling if content is too long */
+}
+
+.project-info h2 {
+    font-size: 2em;
+    margin-bottom: 1em;
+    color: #cc5500;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;  /* Allow tags to wrap */
+    gap: 0.5em;
+    margin: 1em 0;
+}
+
+.tags span {
+    background: rgba(204, 85, 0, 0.1);
+    padding: 0.3em 0.8em;
+    border-radius: 3px;  /* More rectangular */
+    font-size: 0.9em;
+    border: 1px solid #cc5500;
+}
+
+.description {
+    font-size: 1em;
+    line-height: 1.6;
+    margin-top: 1em;
+    color: #cccccc;  /* Lighter gray for description */
+}
+
+.carousel-dots {
+    position: absolute;
+    bottom: 1em;
+    right: 2em;  /* Moved to right side */
+    display: flex;
+    gap: 0.5em;
+    padding: 1em;
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 2px;  /* More rectangular */
+    background: rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.dot.active {
+    background: #cc5500;
+    transform: scale(1.2);
+}
+
+/* Thumbnail images below main image */
+.thumbnail-container {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.thumbnail {
+    width: 120px;
+    height: 68px;
+    object-fit: cover;
+    border-radius: 2px;
+    cursor: pointer;
+    opacity: 0.6;
+    transition: opacity 0.3s ease;
+}
+
+.thumbnail:hover,
+.thumbnail.active {
+    opacity: 1;
 }
 
 .carousel-button {
     position: relative;
-    background: #0000009a;  /* Changed to black */
+    background: rgba(169, 169, 169, 0.3);
     color: #ffffff;
     border: none;
     padding: 1.5em 1em;
     cursor: pointer;
     z-index: 2;
     transition: all 0.3s ease;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 10px rgba(169, 169, 169, 0.3);
     border-radius: 5px;
     backdrop-filter: blur(5px);
 }
 
 .carousel-button:hover {
-    background: #3131319c;  /* Keep black on hover */
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);  /* Darker shadow */
+    background: rgba(204, 85, 0, 0.8);
+    box-shadow: 0 0 15px rgba(204, 85, 0, 0.5);
     transform: scale(1.1);
 }
 
@@ -183,45 +241,4 @@ footer {
 .prev, .next {
     position: static;
     transform: none;
-}
-
-.carousel-dots {
-    position: absolute;
-    bottom: -0.3em;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    gap: 1em;
-    padding: 1em;
-}
-
-.dot {
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.5);
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.dot:hover {
-    background: rgba(255, 255, 255, 0.8);
-}
-
-.dot.active {
-    background: white;
-    transform: scale(1.2);
-}
-
-.tags {
-    display: flex;
-    gap: 0.5em;
-    margin: 1em 0;
-}
-
-.tags span {
-    background: rgba(255, 255, 255, 0.2);
-    padding: 0.3em 0.8em;
-    border-radius: 20px;
-    font-size: 0.9em;
 }
