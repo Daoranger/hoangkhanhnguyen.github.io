@@ -1,10 +1,16 @@
 /* Game Projects Page Styles */
+body {
+    background-color: #cc5500;  /* Match the orange background */
+    color: white;
+    font-family: "Poppins", sans-serif;
+}
 
 .game-projects {
-  display: flex;
-  align-items: center;
-  min-height: 100vh;
-  padding: 10rem 0;
+    display: flex;
+    align-items: center;  /* Center vertically */
+    min-height: 100vh;  /* Full viewport height */
+    padding-top: 0;  /* Remove top padding */
+    padding-bottom: 0;  /* Remove bottom padding */
 }
 
 .game-projects h1 {
@@ -59,18 +65,18 @@
 .project .btn {
   display: inline-block;
   padding: 1rem 2.5rem;
-  background-color: #cc5500;
+  background-color: #000000;
   color: black;
   border-radius: 4rem;
   font-size: 1.6rem;
-  border: 2px solid #cc5500;
+  border: 2px solid #000000;
   transition: 0.3s ease;
 }
 
 .project .btn:hover {
   background-color: black;
-  color: #cc5500;
-  box-shadow: 0 0 25px #cc5500;
+  color: #000000;
+  box-shadow: 0 0 25px #000000;
 }
 
 footer {
@@ -87,6 +93,7 @@ footer {
     display: flex;
     align-items: center;
     gap: 20px;
+    padding-top: 100px;  /* Add padding to account for nav bar */
 }
 
 .carousel-container {
@@ -94,9 +101,9 @@ footer {
     max-width: 1200px;
     margin: 0 auto;
     overflow: hidden;
-    box-shadow: 0 0 20px rgba(204, 85, 0, 0.3);
+    box-shadow: 0 0 20px rgb(0, 0, 0);
     border-radius: 10px;
-    background: rgba(34, 34, 34, 0.8);
+    background: rgba(0, 0, 0, 0.8);
     padding: 20px;
 }
 
@@ -154,21 +161,21 @@ footer {
 
 .carousel-button {
     position: relative;
-    background: rgba(169, 169, 169, 0.3);
+    background: #0000009a;  /* Changed to black */
     color: #ffffff;
     border: none;
     padding: 1.5em 1em;
     cursor: pointer;
     z-index: 2;
     transition: all 0.3s ease;
-    box-shadow: 0 0 10px rgba(169, 169, 169, 0.3);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     border-radius: 5px;
     backdrop-filter: blur(5px);
 }
 
 .carousel-button:hover {
-    background: rgba(204, 85, 0, 0.8);
-    box-shadow: 0 0 15px rgba(204, 85, 0, 0.5);
+    background: #3131319c;  /* Keep black on hover */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);  /* Darker shadow */
     transform: scale(1.1);
 }
 
