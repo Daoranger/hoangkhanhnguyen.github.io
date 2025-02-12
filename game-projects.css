@@ -113,10 +113,19 @@ footer {
   color: white;
 }
 
+.carousel-wrapper {
+    position: relative;
+    max-width: 1400px;
+    margin: 2em auto;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
 .carousel-container {
     position: relative;
     max-width: 1200px;
-    margin: 2em auto;
+    margin: 0 auto;
     overflow: hidden;
     box-shadow: 0 0 20px rgba(204, 85, 0, 0.3);
     border-radius: 10px;
@@ -153,30 +162,28 @@ footer {
 }
 
 .carousel-button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+    position: relative; /* Changed from absolute */
     background: rgba(0, 0, 0, 0.6);
     color: white;
     border: none;
-    padding: 1em;
+    padding: 1.5em 1em;
     cursor: pointer;
     z-index: 2;
     transition: all 0.3s ease;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
 }
 
 .carousel-button:hover {
     background: rgba(204, 85, 0, 0.8);
     box-shadow: 0 0 15px rgba(204, 85, 0, 0.5);
+    transform: scale(1.1);
 }
 
-.prev {
-    left: 0;
-}
-
-.next {
-    right: 0;
+/* Remove the prev and next position styles since they're no longer needed */
+.prev, .next {
+    position: static;
+    transform: none;
 }
 
 .carousel-dots {
