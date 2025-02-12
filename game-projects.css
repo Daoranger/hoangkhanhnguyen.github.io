@@ -94,6 +94,7 @@ footer {
     align-items: center;
     gap: 20px;
     padding-top: 100px;  /* Add padding to account for nav bar */
+    filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.4));  /* Added drop shadow */
 }
 
 .carousel-container {
@@ -102,10 +103,10 @@ footer {
     height: 460px;  /* Fixed height to match slides */
     margin: 0 auto;
     overflow: hidden;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
     background: #000000;
     padding: 0;
+    border: 1px solid rgba(255, 255, 255, 0.1);  /* Added subtle white outline */
 }
 
 .carousel-content {
