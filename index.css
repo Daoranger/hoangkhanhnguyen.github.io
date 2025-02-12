@@ -33,13 +33,16 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  padding: 1.5rem 9%;
+  padding: 2.5rem 9%;
   margin: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
   z-index: 100;
 }
+
+/* Override for index page */
+
 
 .logo {
   font-size: 3rem;
