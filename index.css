@@ -98,7 +98,7 @@ nav a.active {
 
 section {
   min-height: 100vh;
-  padding: 5rem 9% 5rem;
+  padding: 20rem 9% 5rem;
 }
 
 .home {
@@ -106,10 +106,11 @@ section {
   justify-content: center;
   align-items: center;
   gap: 8rem;
+  text-align: center;
 }
 
 .home .home-content h1 {
-  font-size: 6rem;
+  font-size: 7rem;
   font-weight: 700;
   line-height: 1.3;
 }
@@ -119,13 +120,15 @@ span {
 }
 
 .home-content h3 {
-  font-size: 4rem;
+  font-size: 5rem;
   margin-bottom: 1rem;
   font-weight: 700;
 }
 
 .home-content p {
-  font-size: 1.6rem;
+  font-size: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .home-img {
@@ -255,14 +258,15 @@ span {
   .home {
     flex-direction: column;
     margin: 5rem 4rem;
+    text-align: center;
   }
 
   .home .home-content h3 {
-    font-size: 2.5rem;
+    font-size: 3.5rem;
   }
 
   .home-content h1 {
-    font-size: 5rem;
+    font-size: 6rem;
   }
 
   .home-img img {
