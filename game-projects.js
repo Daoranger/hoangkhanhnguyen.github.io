@@ -1,11 +1,14 @@
 document.addEventListener('DOMContentLoaded', function() {
     const carousel = document.querySelector('.carousel-content');
+    const carouselContainer = document.querySelector('.carousel-container');
     const slides = document.querySelectorAll('.project-slide');
     const prevButton = document.querySelector('.prev');
     const nextButton = document.querySelector('.next');
     const dotsContainer = document.querySelector('.carousel-dots');
     
     let currentIndex = 0;
+    let autoPlayInterval;
+    let isHovering = false;
     
     // Create dots
     slides.forEach((_, index) => {
@@ -31,8 +34,10 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     function nextSlide() {
-        currentIndex = (currentIndex + 1) % slides.length;
-        goToSlide(currentIndex);
+        if (!isHovering) {
+            currentIndex = (currentIndex + 1) % slides.length;
+            goToSlide(currentIndex);
+        }
     }
     
     function prevSlide() {
@@ -40,10 +45,38 @@ document.addEventListener('DOMContentLoaded', function() {
         goToSlide(currentIndex);
     }
     
-    // Event listeners
-    nextButton.addEventListener('click', nextSlide);
-    prevButton.addEventListener('click', prevSlide);
+    function startAutoPlay() {
+        autoPlayInterval = setInterval(nextSlide, 7000); // Changed to 7 seconds
+    }
     
-    // Auto-play (optional)
-    setInterval(nextSlide, 60000);
+    function stopAutoPlay() {
+        clearInterval(autoPlayInterval);
+    }
+    
+    // Event listeners
+    nextButton.addEventListener('click', () => {
+        nextSlide();
+        stopAutoPlay();
+        startAutoPlay();
+    });
+    
+    prevButton.addEventListener('click', () => {
+        prevSlide();
+        stopAutoPlay();
+        startAutoPlay();
+    });
+    
+    // Hover events
+    carouselContainer.addEventListener('mouseenter', () => {
+        isHovering = true;
+        stopAutoPlay();
+    });
+    
+    carouselContainer.addEventListener('mouseleave', () => {
+        isHovering = false;
+        startAutoPlay();
+    });
+    
+    // Start auto-play initially
+    startAutoPlay();
 }); 
