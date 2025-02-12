@@ -1,9 +1,11 @@
 <header>
     <div class="logo-container">
-        <img src="images/Life is Roblox.png" alt="Roblox Avatar" class="logo-image">
+        <a href="index.html" class="logo-image-link">
+            <img src="images/Life is Roblox.png" alt="Roblox Avatar" class="logo-image">
+        </a>
         <div class="title-container">
-            <a href="#" class="logo">Hoang Nguyen</a>
-            <span class="role">Gameplay/AI Programmer</span>
+            <a href="index.html" class="logo">Hoang Nguyen</a>
+            <a href="index.html" class="role">Gameplay/AI Programmer</a>
         </div>
     </div>
     <nav>
@@ -22,16 +24,20 @@
         gap: 20px;
     }
     
-    .logo-image {
-        width: 60px;  /* Increased from 45px */
-        height: 60px;
-        border-radius: 50%;
-        object-fit: cover;
+    .logo-image-link {
+        display: block;
         transition: transform 0.3s ease;
     }
 
-    .logo-image:hover {
+    .logo-image-link:hover {
         transform: scale(1.2);
+    }
+
+    .logo-image {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        object-fit: cover;
     }
 
     .title-container {
@@ -42,7 +48,9 @@
 
     .logo {
         margin: 0;
-        font-size: 2.2em;  /* Increased from 1.8em */
+        font-size: 2.2em;
+        text-decoration: none;
+        color: inherit;
         transition: transform 0.3s ease;
     }
 
@@ -51,14 +59,16 @@
     }
 
     .role {
-        font-size: 1.4em;  /* Increased from 1.2em */
-        color: #444;  /* Darkened from #666 for better visibility */
-        font-weight: 400;  /* Increased from 300 for better visibility */
+        font-size: 1.4em;
+        color: #444;
+        font-weight: 400;
+        text-decoration: none;
         transition: transform 0.3s ease;
     }
 
     .role:hover {
         transform: scale(1.1);
+        color: #cc5500;
     }
 
     nav a {
