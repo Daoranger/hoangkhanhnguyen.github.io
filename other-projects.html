@@ -8,7 +8,6 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     />
     <link rel="stylesheet" href="index.css" />
-    <link rel="stylesheet" href="game-projects.css" />
     <title>Other Projects - Hoang Nguyen</title>
   </head>
   <body>
@@ -16,7 +15,14 @@
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script>
       $(function(){
-        $("#nav-placeholder").load("nav.html");
+        $("#nav-placeholder").load("nav.html", function() {
+          const currentPage = window.location.pathname.split("/").pop() || 'index.html';
+          document.querySelectorAll('nav a').forEach(link => {
+              if (link.getAttribute('href') === currentPage) {
+                  link.classList.add('active');
+              }
+          });
+        });
       });
     </script>
   </body>

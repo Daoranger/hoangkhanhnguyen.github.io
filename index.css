@@ -23,7 +23,12 @@ body {
 }
 
 header {
-  background-color: #000000;
+  background: linear-gradient(to right, 
+    rgba(255, 140, 0, 0.7),
+    rgba(74, 74, 74, 0.7),
+    rgba(255, 87, 34, 0.7),
+    rgba(255, 193, 7, 0.7)
+  ), #000000;
   position: fixed;
   top: 0;
   left: 0;
@@ -34,16 +39,6 @@ header {
   justify-content: space-between;
   align-items: center;
   z-index: 100;
-}
-
-/* Override for index page */
-body.index-page header {
-  background: linear-gradient(to right, 
-    rgba(255, 140, 0, 0.7),
-    rgba(74, 74, 74, 0.7),
-    rgba(255, 87, 34, 0.7),
-    rgba(255, 193, 7, 0.7)
-  ), #000000;
 }
 
 .logo {

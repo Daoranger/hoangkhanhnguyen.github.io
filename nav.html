@@ -18,22 +18,9 @@
 </header>
 
 <style>
-    header {
-        background-color: #000000;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        padding: 1.5rem 9%;  /* Adjusted padding */
-        margin: 0;  /* Remove margin */
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        z-index: 100;
-    }
     
     /* Override for index page */
-    body.index-page header {
+    header {
         background: linear-gradient(to right, 
             rgba(255, 140, 0, 0.7),
             rgba(255, 87, 34, 0.7),
@@ -126,15 +113,21 @@
 </style>
 
 <script>
+    // Get current page filename
     const currentPage = window.location.pathname.split("/").pop() || 'index.html';
     
+    // Add active class to the corresponding nav link
     document.querySelectorAll('nav a').forEach(link => {
         if (link.getAttribute('href') === currentPage) {
             link.classList.add('active');
         }
     });
     
+    // Add class to body if we're on index page
     if (currentPage === 'index.html' || currentPage === '') {
         document.body.classList.add('index-page');
+    } else {
+        // Force black background for non-index pages
+        document.querySelector('header').style.backgroundColor = '#000000';
     }
 </script>
