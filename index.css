@@ -272,3 +272,9 @@ span {
     margin-top: 4rem;
   }
 }
+
+.logo-img {
+  height: 40px;
+  width: auto;
+  vertical-align: middle;
+} 

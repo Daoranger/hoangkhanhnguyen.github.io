@@ -12,20 +12,7 @@
     <title>Game Projects</title>
   </head>
   <body>
-    <header>
-      <a href="#" class="logo">Hoang Nguyen</a>
-      <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="game-projects.html" class="active">Game Projects</a>
-        <a href="other-projects.html">Other Projects</a>
-        <a
-          href="https://drive.google.com/file/d/1CrC2c2-egnaXx-H201L2GqfK6sQdPTh_/view?usp=sharing"
-          >Resume</a
-        >
-        <a href="contact.html">Contact</a>
-      </nav>
-    </header>
+    <div id="nav-placeholder"></div>
     <section class="game-projects">
       <h1>My Game Projects</h1>
       <div class="project">
@@ -44,5 +31,11 @@
       </div>
       <!-- Add more projects as needed -->
     </section>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+      $(function(){
+        $("#nav-placeholder").load("nav.html");
+      });
+    </script>
   </body>
 </html>

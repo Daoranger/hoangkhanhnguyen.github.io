@@ -11,21 +11,7 @@
     <title>Hoang's About Me</title>
   </head>
   <body>
-    <header>
-      <a href="#" class="logo">Hoang Nguyen</a>
-      <nav>
-        <a href="#" class="active">Home</a>
-        <a href="#"> About</a>
-        <a href="game-projects.html"> Game Projects</a>
-        <a href="#"> Other Projects</a>
-        <a
-          href="https://drive.google.com/file/d/1CrC2c2-egnaXx-H201L2GqfK6sQdPTh_/view?usp=sharing"
-        >
-          Resume</a
-        >
-        <a href="#"> Contact</a>
-      </nav>
-    </header>
+    <div id="nav-placeholder"></div>
     <section class="home">
       <div class="home-content">
         <h1>Hi, It's <span>Hoang</span></h1>
@@ -52,5 +38,11 @@
         </div>
       </div>
     </section>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+      $(function(){
+        $("#nav-placeholder").load("nav.html");
+      });
+    </script>
   </body>
 </html>

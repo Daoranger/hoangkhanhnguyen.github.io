@@ -1,0 +1,59 @@
+<header>
+    <div class="logo-container">
+        <img src="assets/Life is Roblox.png" alt="Roblox Avatar" class="logo-image">
+        <div class="title-container">
+            <a href="#" class="logo">Hoang Nguyen</a>
+            <span class="role">Gameplay/AI Programmer</span>
+        </div>
+    </div>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="game-projects.html">Game Projects</a>
+        <a href="other-projects.html">Other Projects</a>
+        <a href="https://drive.google.com/file/d/1CrC2c2-egnaXx-H201L2GqfK6sQdPTh_/view?usp=sharing">Resume</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+
+<style>
+    .logo-container {
+        display: flex;
+        align-items: center;
+        gap: 20px;  /* Increased spacing between image and text */
+    }
+    
+    .logo-image {
+        width: 45px;  /* Slightly larger image */
+        height: 45px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
+    .title-container {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;  /* Slightly increased gap between name and role */
+    }
+
+    .logo {
+        margin: 0;  /* Remove any default margins */
+        font-size: 1.8em;  /* Increased from 1.2em */
+    }
+
+    .role {
+        font-size: 1.2em;  /* Increased from 0.8em */
+        color: #666;  /* Subtle color for role */
+        font-weight: 300;  /* Lighter weight for role */
+    }
+</style>
+
+<script>
+    // Get current page filename
+    const currentPage = window.location.pathname.split("/").pop() || 'index.html';
+    // Add active class to the corresponding nav link
+    document.querySelectorAll('nav a').forEach(link => {
+        if (link.getAttribute('href') === '#' || link.getAttribute('href') === currentPage) {
+            link.classList.add('active');
+        }
+    });
+</script>
