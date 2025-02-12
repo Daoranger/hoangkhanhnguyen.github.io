@@ -8,6 +8,9 @@
             <a href="index.html" class="role">Gameplay/AI Programmer</a>
         </div>
     </div>
+    <div class="menu-btn">
+        <i class="fa-solid fa-bars"></i>
+    </div>
     <nav>
         <a href="index.html">Home</a>
         <a href="game-projects.html">Game Projects</a>
@@ -104,6 +107,85 @@
         color: #FF5722;  /* Coral for active page */
         font-weight: bold;
     }
+
+    .menu-btn {
+        display: none;
+        font-size: 2rem;
+        cursor: pointer;
+        color: #FF8C00;
+    }
+
+    @media screen and (max-width: 768px) {
+        header {
+            padding: 1rem 5%;
+        }
+
+        .menu-btn {
+            display: block;
+            z-index: 999;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 300px;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.95);
+            flex-direction: column;
+            padding: 100px 20px;
+            transition: 0.3s ease;
+            z-index: 998;
+        }
+
+        nav.active {
+            right: 0;
+        }
+
+        nav a {
+            display: block;
+            font-size: 1.8rem;
+            margin: 1.5rem 0;
+            padding: 0.8em 1em;
+            text-align: center;
+        }
+
+        .logo {
+            font-size: 1.8em;
+        }
+
+        .role {
+            font-size: 1.2em;
+        }
+
+        .logo-image {
+            width: 50px;
+            height: 50px;
+        }
+    }
+
+    @media screen and (max-width: 480px) {
+        .logo-container {
+            gap: 10px;
+        }
+
+        .logo {
+            font-size: 1.5em;
+        }
+
+        .role {
+            font-size: 1em;
+        }
+
+        .logo-image {
+            width: 40px;
+            height: 40px;
+        }
+
+        nav a {
+            font-size: 1.6rem;
+        }
+    }
 </style>
 
 <script>
@@ -124,4 +206,21 @@
         // Force black background for non-index pages
         document.querySelector('header').style.backgroundColor = '#000000';
     }
+
+    // Add mobile menu functionality
+    const menuBtn = document.querySelector('.menu-btn');
+    const nav = document.querySelector('nav');
+
+    menuBtn.addEventListener('click', () => {
+        menuBtn.querySelector('i').classList.toggle('fa-times');
+        nav.classList.toggle('active');
+    });
+
+    // Close menu when clicking a link
+    document.querySelectorAll('nav a').forEach(link => {
+        link.addEventListener('click', () => {
+            menuBtn.querySelector('i').classList.remove('fa-times');
+            nav.classList.remove('active');
+        });
+    });
 </script>
