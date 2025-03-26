@@ -92,28 +92,32 @@ footer {
     width: 100%;
     margin: 0 auto;
     display: flex;
-    justify-content: center;  /* Center horizontally */
-    align-items: center;      /* Center vertically */
+    justify-content: center;
+    align-items: center;
     gap: 20px;
     padding-top: 100px;
     filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.4));
+    overflow: hidden;
 }
 
 .carousel-container {
     position: relative;
     width: 1200px;
     height: 460px;
-    overflow: visible;
+    overflow: hidden;
     border-radius: 4px;
     background: #161616;
     padding: 0;
     border: 1px solid rgba(255, 255, 255, 0.1);
+    z-index: 1;
 }
 
 .carousel-content {
     display: flex;
     transition: transform 0.5s ease-in-out;
-    height: 100%;  /* Full height */
+    height: 100%;
+    position: relative;
+    z-index: 1;
 }
 
 .project-slide {
@@ -123,11 +127,13 @@ footer {
     position: relative;
     overflow: hidden;
     display: none;
+    pointer-events: none;
 }
 
 .project-slide.active {
     display: flex;
     gap: 20px;
+    pointer-events: all;
 }
 
 .project-slide img {
