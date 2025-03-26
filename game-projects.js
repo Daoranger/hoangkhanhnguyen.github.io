@@ -10,9 +10,12 @@ document.addEventListener('DOMContentLoaded', function() {
     let autoPlayInterval;
     let isHovering = false;
     
-    // Create dots
+    // Clear any existing dots
+    dotsContainer.innerHTML = '';
+    
+    // Create dots based on number of slides
     slides.forEach((_, index) => {
-        const dot = document.createElement('div');
+        const dot = document.createElement('span');
         dot.classList.add('dot');
         if (index === 0) dot.classList.add('active');
         dot.addEventListener('click', () => goToSlide(index));
@@ -91,4 +94,24 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Add this line after all function definitions to initialize first slide
     goToSlide(0);
-}); 
+});
+
+function goToSlide(index) {
+    const slides = document.querySelectorAll('.project-slide');
+    const dots = document.querySelectorAll('.dot');
+    
+    // Remove active class from all slides and dots
+    slides.forEach(slide => slide.classList.remove('active'));
+    dots.forEach(dot => dot.classList.remove('active'));
+    
+    // Add active class to current slide and dot
+    slides[index].classList.add('active');
+    dots[index].classList.add('active');
+}
+
+// Update dots when using prev/next buttons
+function updateDots(index) {
+    const dots = document.querySelectorAll('.dot');
+    dots.forEach(dot => dot.classList.remove('active'));
+    dots[index].classList.add('active');
+} 

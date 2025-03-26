@@ -211,19 +211,21 @@ footer {
 .carousel-dots {
     position: absolute;
     bottom: 1em;
-    right: 2em;  /* Moved to right side */
+    right: 2em;
     display: flex;
     gap: 0.5em;
     padding: 1em;
+    z-index: 3;
 }
 
 .dot {
     width: 8px;
     height: 8px;
-    border-radius: 2px;  /* More rectangular */
+    border-radius: 2px;
     background: rgba(255, 255, 255, 0.2);
     cursor: pointer;
     transition: all 0.3s ease;
+    display: block;
 }
 
 .dot.active {
