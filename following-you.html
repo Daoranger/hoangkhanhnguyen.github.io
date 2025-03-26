@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="project-page.css" />
+    <title>Following You - Project Details</title>
+  </head>
+  <body>
+    <div id="nav-placeholder"></div>
+    
+    <main class="project-page">
+      <header class="project-header">
+        <div class="header-content">
+          <h1>Following You</h1>
+          <div class="tags">
+            <span>RPG</span>
+            <span>Action</span>
+            <span>Adventure</span>
+          </div>
+        </div>
+        <img src="images/followingyou_bg.png" alt="Following You Banner">
+      </header>
+
+      <nav class="category-nav">
+        <a href="#ai" class="active">AI Programming</a>
+        <a href="#gameplay">Gameplay</a>
+        <a href="#other">Other Features</a>
+      </nav>
+
+      <section id="ai" class="content-section">
+        <h2>AI Programming</h2>
+        <article class="feature-card">
+          <h3>Advanced NPC Behavior System</h3>
+          <div class="feature-content">
+            <img src="images/ai-system.png" alt="AI System Diagram">
+            <div class="feature-text">
+              <p>Description of your AI implementation...</p>
+              <div class="technical-details">
+                <h4>Technical Highlights:</h4>
+                <ul>
+                  <li>Behavior Tree Architecture</li>
+                  <li>A* Pathfinding</li>
+                  <li>Dynamic Decision Making</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </article>
+        <!-- More AI features -->
+      </section>
+
+      <section id="gameplay" class="content-section">
+        <h2>Gameplay Features</h2>
+        <!-- Similar article structure for gameplay features -->
+      </section>
+
+      <section id="other" class="content-section">
+        <h2>Other Features</h2>
+        <!-- Similar article structure for other features -->
+      </section>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+      $(function(){
+        $("#nav-placeholder").load("nav.html", function() {
+          const currentPage = window.location.pathname.split("/").pop() || 'index.html';
+          document.querySelectorAll('nav a').forEach(link => {
+              if (link.getAttribute('href') === currentPage) {
+                  link.classList.add('active');
+              }
+          });
+        });
+      });
+    </script>
+    <script src="project-page.js"></script>
+  </body>
+</html> 
