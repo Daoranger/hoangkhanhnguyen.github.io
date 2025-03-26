@@ -6,11 +6,53 @@ body {
     padding: 0;
 }
 
-.project-page {
+.category-nav {
+    background-color: #1b1b1b;
+    width: 100%;
+    margin-top: 60px; /* Space for main nav */
+}
+
+.nav-container {
     max-width: 1400px;
     margin: 0 auto;
-    padding: 20px;
-    padding-top: 100px; /* Space for nav bar */
+    display: flex;
+    gap: 30px;
+    padding: 0 20px;
+}
+
+.category-nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 15px 0;
+    font-size: 1.1em;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+    position: relative;
+}
+
+.category-nav a:hover {
+    opacity: 1;
+}
+
+.category-nav a.active {
+    color: #cc5500;
+    opacity: 1;
+}
+
+.category-nav a.active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #cc5500;
+}
+
+.project-page {
+    max-width: 1400px;
+    margin: 40px auto;
+    padding: 0 20px;
 }
 
 .project-header {
@@ -40,32 +82,6 @@ body {
 .header-content h1 {
     font-size: 3em;
     margin-bottom: 20px;
-}
-
-.category-nav {
-    position: sticky;
-    top: 80px; /* Adjust based on your nav bar height */
-    background: #161616;
-    padding: 15px 0;
-    margin: 20px 0 40px 0;
-    border-radius: 8px;
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-    z-index: 90; /* Below main nav but above content */
-}
-
-.category-nav a {
-    color: white;
-    text-decoration: none;
-    padding: 8px 16px;
-    border-radius: 4px;
-    transition: all 0.3s ease;
-}
-
-.category-nav a.active,
-.category-nav a:hover {
-    background: #cc5500;
 }
 
 .content-section {
@@ -109,6 +125,20 @@ body {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    .category-nav {
+        margin-top: 50px;
+    }
+    
+    .nav-container {
+        padding: 0 10px;
+        gap: 15px;
+    }
+    
+    .category-nav a {
+        font-size: 1em;
+        padding: 12px 0;
+    }
+    
     .project-header {
         height: 300px;
     }
@@ -119,12 +149,6 @@ body {
     
     .feature-content {
         grid-template-columns: 1fr;
-    }
-    
-    .category-nav {
-        top: 60px;
-        padding: 10px 0;
-        gap: 10px;
     }
 }
 
