@@ -7,7 +7,7 @@ body {
 }
 
 .project-page {
-    max-width: 1400px;
+    max-width: 1000px;
     margin: 0 auto;
     padding: 120px 20px 0 20px;
 }
@@ -20,7 +20,6 @@ body {
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
-    z-index: 1;
 }
 
 .project-header img {
@@ -40,46 +39,66 @@ body {
 
 .header-content h1 {
     font-size: 3em;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+}
+
+.tagline {
+    font-size: 1.4em;
+    font-weight: 300;
+    color: #cc5500;
+    font-style: italic;
+    margin: 0;
 }
 
 .content-section {
     margin-bottom: 60px;
     background: #161616;
     border-radius: 12px;
-    padding: 30px;
+    padding: 40px;
 }
 
-.content-section h2 {
-    font-size: 2em;
+h2 {
+    font-size: 2.5em;
     margin-bottom: 30px;
     color: #cc5500;
 }
 
-.feature-card {
-    background: rgba(0, 0, 0, 0.2);
-    border-radius: 8px;
-    padding: 30px;
+p {
+    font-size: 1.1em;
+    line-height: 1.6;
     margin-bottom: 30px;
 }
 
-.feature-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 30px;
-}
-
-.feature-content img {
+.content-section img {
     width: 100%;
-    border-radius: 8px;
+    border-radius: 12px;
+    margin: 20px 0 40px 0;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
-.technical-details {
-    margin-top: 20px;
-    padding: 20px;
-    background: rgba(255,255,255,0.1);
-    border-radius: 8px;
+/* Add styling for tags */
+.tags {
+    display: flex;
+    gap: 10px;
+}
+
+.tags span {
+    background-color: #cc5500;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 0.9em;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive adjustments for tags */
+@media (max-width: 480px) {
+    .tags span {
+        padding: 4px 8px;
+        font-size: 0.8em;
+    }
 }
 
 /* Responsive Design */
@@ -96,8 +115,12 @@ body {
         font-size: 2em;
     }
     
-    .feature-content {
-        grid-template-columns: 1fr;
+    h2 {
+        font-size: 2em;
+    }
+    
+    .tagline {
+        font-size: 1.2em;
     }
 }
 
@@ -116,6 +139,14 @@ body {
     
     .header-content h1 {
         font-size: 1.5em;
+    }
+    
+    h2 {
+        font-size: 1.8em;
+    }
+    
+    .tagline {
+        font-size: 1em;
     }
 } 
 
