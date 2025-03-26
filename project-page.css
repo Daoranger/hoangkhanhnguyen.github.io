@@ -7,9 +7,11 @@ body {
 }
 
 .category-nav {
+    position: sticky;
+    top: 60px;
     background-color: #1b1b1b;
     width: 100%;
-    margin-top: 60px; /* Space for main nav */
+    z-index: 999;
 }
 
 .nav-container {
@@ -58,10 +60,12 @@ body {
 .project-header {
     position: relative;
     height: 400px;
+    margin-top: 0;
     margin-bottom: 40px;
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    z-index: 1;
 }
 
 .project-header img {
@@ -174,3 +178,11 @@ body {
         font-size: 0.9em;
     }
 } 
+
+#nav-placeholder {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
