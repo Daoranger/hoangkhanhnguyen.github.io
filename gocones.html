@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="project-page.css" />
+    <title>Go Cones - Project Details</title>
+  </head>
+  <body>
+    <div id="nav-placeholder"></div>
+    
+    <main class="project-page">
+      <header class="project-header">
+        <img src="images/gocones_title.png" alt="Go Cones Banner">
+        <div class="header-content">
+          <h1>Go Cones</h1>
+          <div class="tags">
+            <span>Strategy</span>
+            <span>Puzzle</span>
+            <span>2D</span>
+          </div>
+        </div>
+      </header>
+
+      <section id="gameplay" class="content-section">
+        <h2>Gameplay Features</h2>
+        <article class="feature-card">
+          <h3>Core Mechanics</h3>
+          <div class="feature-content">
+            <img src="images/gumbrawll-gameplay.png" alt="Gameplay Screenshot">
+            <div class="feature-text">
+              <p>Description of your gameplay mechanics...</p>
+              <div class="technical-details">
+                <h4>Key Features:</h4>
+                <ul>
+                  <li>Feature 1</li>
+                  <li>Feature 2</li>
+                  <li>Feature 3</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <section id="technical" class="content-section">
+        <h2>Technical Features</h2>
+        <!-- Add technical features -->
+      </section>
+
+      <section id="development" class="content-section">
+        <h2>Development Process</h2>
+        <!-- Add development details -->
+      </section>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+      $(function(){
+        $("#nav-placeholder").load("nav.html", function() {
+          const currentPage = window.location.pathname.split("/").pop() || 'index.html';
+          document.querySelectorAll('nav a').forEach(link => {
+              if (link.getAttribute('href') === currentPage) {
+                  link.classList.add('active');
+              }
+          });
+        });
+      });
+    </script>
+    <script src="project-page.js"></script>
+  </body>
+</html> 
